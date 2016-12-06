@@ -23,20 +23,20 @@
         android:id="@+id/walk_button" />
 
     <Button
-        android:text="Run"
+        android:text="Bus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/walk_button"
         android:layout_centerHorizontal="true"
-        android:onClick="collectRunData"
-        android:id="@+id/run_button" />
+        android:onClick="collectBusData"
+        android:id="@+id/bus_button" />
 
 
     <Button
         android:text="Bike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/run_button"
+        android:layout_alignTop="@+id/bus_button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="17dp"

@@ -38,7 +38,7 @@ public class DataCollectActivity extends AppCompatActivity implements SensorEven
     String transport = "";
 
     Button walk_button;
-    Button run_button;
+    Button bus_button;
     Button bike_button;
 
     @Override
@@ -47,7 +47,7 @@ public class DataCollectActivity extends AppCompatActivity implements SensorEven
         setContentView(R.layout.activity_data_collect);
 
         walk_button = (Button) findViewById(R.id.walk_button);
-        run_button = (Button) findViewById(R.id.run_button);
+        bus_button = (Button) findViewById(R.id.bus_button);
         bike_button = (Button) findViewById(R.id.bike_button);
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -67,8 +67,8 @@ public class DataCollectActivity extends AppCompatActivity implements SensorEven
     }
 
     public void collectRunData(View view){
-        run_button.setBackgroundColor(Color.GREEN);
-        collectTransportData(view, "run");
+        bus_button.setBackgroundColor(Color.GREEN);
+        collectTransportData(view, "bus");
     }
 
     public void collectBikeData(View view){
@@ -83,7 +83,7 @@ public class DataCollectActivity extends AppCompatActivity implements SensorEven
 
     public void stopCollectData(View view){
         walk_button.setBackgroundColor(Color.LTGRAY);
-        run_button.setBackgroundColor(Color.LTGRAY);
+        bus_button.setBackgroundColor(Color.LTGRAY);
         bike_button.setBackgroundColor(Color.LTGRAY);
 
         mSensorManager.unregisterListener(this);
